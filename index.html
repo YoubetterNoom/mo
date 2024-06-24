@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RICK BILLY</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: "Single Day", cursive;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .container img {
+            border: 5px solid white;
+            transition: transform 0.3s ease;
+            width: 80%; /* Adjust width as needed */
+            height: auto;
+            max-width: 600px; /* Optional: to limit the max width */
+        }
+        .container img:hover {
+            transform: scale(1.1);
+        }
+        .button-container {
+            margin: 10px;
+            margin-top: 10px;
+        }
+        .join-button {
+            background-color: white;
+            color: rgb(0, 0, 0);
+            font-family: "Single Day", cursive;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+        }
+        .join-button:hover {
+            background-color: rgb(7, 7, 7);
+            color: white;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .footer a:hover {
+            background-color: white;
+            color: rgb(0, 0, 0);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: "Single Day", cursive;
+        }
+        .modal-content {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border: 2px solid white;
+            text-align: center;
+            animation: shake 0.5s ease;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .modal-link {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            font-family: "Single Day", cursive;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .modal-link:hover {
+            background-color: rgb(255, 255, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="dogwifmoon.png"> 
+    </div>
+    <div class="footer">
+        <a href="https://x.com/Dogwifmoonshot">TWITTER</a>
+        <a href="https://t.me/dogwifmoonshot">TELEGRAM</a>
+        <a href="https://t.me/dogwifmoonshot">MOONSHOT</a>
+    </div>
+
+    Dogwifmoon to launch on moonshot, sendor and easy
+
+
+<audio id="background-music" src="Rick and Morty.mp3" loop></audio>
+
+<script>
+    function openModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'flex';
+        // Trigger the animation by adding and removing the class
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.classList.remove('shake');
+        void modalContent.offsetWidth; // Trigger reflow to restart animation
+        modalContent.classList.add('shake');
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onload = function() {
+        const audio = document.getElementById('background-music');
+        audio.volume = 0.05; // Set volume to 10%
+        audio.play();
+    }
+</script>
